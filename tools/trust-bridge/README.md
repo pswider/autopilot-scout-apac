@@ -21,7 +21,8 @@ Each audit entry stores the SHA-256 hash of the entry before it. Change any past
 ```mermaid
 flowchart LR
     G["genesis"] --> E1["#1 allowed"] --> E2["#2 allowed"] --> E3["#3 blocked"] --> E4["..."] --> E7["#7 blocked<br/>consent revoked"] --> E8["..."]
-    classDef blocked fill:#FBEDEA,stroke:#A5493A,color:#132030
+    classDef default fill:#FFF9F0,stroke:#EAA300,color:#241A12
+    classDef blocked fill:#F7894A,stroke:#241A12,color:#241A12,stroke-dasharray:5 3
     class E3,E7 blocked
 ```
 

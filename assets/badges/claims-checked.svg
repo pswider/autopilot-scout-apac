@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="201" height="20" viewBox="0 0 201 20" role="img" aria-labelledby="title">
+  <title id="title">claims checked: first-party sources</title>
+  <rect width="93" height="20" fill="#241A12"/>
+  <rect x="93" width="108" height="20" fill="#EAA300"/>
+  <g font-family="Verdana, DejaVu Sans, sans-serif" font-size="11" text-anchor="middle">
+    <text x="46.5" y="14" fill="#FFFFFF">claims checked</text>
+    <text x="147" y="14" fill="#241A12">first-party sources</text>
+  </g>
+</svg>

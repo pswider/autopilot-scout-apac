@@ -1,14 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="t d">
   <title id="t">The reusable pattern</title>
   <desc id="d">One governance spine of identity, policy, approval, audit and evals spans two agent domains. Workforce uses Autopilot with work context, Entra identity and Microsoft 365 policy. Patient uses Tula with health context, a patient boundary and safety constraints. Both sit on an OpenClaw foundation where deployment and controls vary.</desc>
-  <rect width="1200" height="520" fill="#F7F9FB"/>
+  <defs>
+    <linearGradient id="header" x1="0%" y1="0%" x2="100%" y2="65%">
+      <stop offset="0%" stop-color="#FFB900"/>
+      <stop offset="35%" stop-color="#EAA300"/>
+      <stop offset="72%" stop-color="#F7630C"/>
+      <stop offset="100%" stop-color="#F7894A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="#FFF9F0"/>
   <g font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
-    <text x="60" y="58" fill="#4A5A6B" font-size="13" letter-spacing="2.5" font-weight="600">REUSABLE PATTERN</text>
-    <text x="60" y="92" fill="#132030" font-size="28" font-weight="600">The pattern holds across agent domains</text>
+    <text x="60" y="58" fill="#574438" font-size="13" letter-spacing="2.5" font-weight="600">REUSABLE PATTERN</text>
+    <text x="60" y="92" fill="#241A12" font-size="28" font-weight="600">The pattern holds across agent domains</text>
 
-    <rect x="60" y="124" width="1080" height="64" rx="10" fill="#132030"/>
-    <text x="96" y="162" fill="#8FD1C1" font-size="13" letter-spacing="2.5" font-weight="600">GOVERNANCE</text>
-    <g fill="#E8EEF3" font-size="16" font-weight="600">
+    <rect x="60" y="124" width="1080" height="64" rx="10" fill="url(#header)"/>
+    <text x="96" y="162" fill="#241A12" font-size="13" letter-spacing="2.5" font-weight="600">GOVERNANCE</text>
+    <g fill="#241A12" font-size="16" font-weight="600">
       <text x="300" y="162">Identity</text>
       <text x="440" y="162">Policy</text>
       <text x="570" y="162">Approval</text>
@@ -17,24 +25,24 @@
     </g>
 
     <g>
-      <rect x="60" y="212" width="524" height="190" rx="10" fill="#FFFFFF" stroke="#D5DEE7"/>
-      <text x="92" y="250" fill="#4A5A6B" font-size="12" letter-spacing="2.5" font-weight="600">WORKFORCE</text>
-      <text x="92" y="286" fill="#132030" font-size="26" font-weight="600">Autopilot</text>
-      <text x="92" y="318" fill="#34465A" font-size="15">Work context from Microsoft 365</text>
-      <text x="92" y="344" fill="#34465A" font-size="15">Its own Microsoft Entra identity</text>
-      <text x="92" y="370" fill="#34465A" font-size="15">Purview policy enforced before send or write</text>
+      <rect x="60" y="212" width="524" height="190" rx="10" fill="#FFFFFF" stroke="#EAA300"/>
+      <text x="92" y="250" fill="#574438" font-size="12" letter-spacing="2.5" font-weight="600">WORKFORCE</text>
+      <text x="92" y="286" fill="#241A12" font-size="26" font-weight="600">Autopilot</text>
+      <text x="92" y="318" fill="#574438" font-size="15">Work context from Microsoft 365</text>
+      <text x="92" y="344" fill="#574438" font-size="15">Its own Microsoft Entra identity</text>
+      <text x="92" y="370" fill="#574438" font-size="15">Purview policy enforced before send or write</text>
     </g>
     <g>
-      <rect x="616" y="212" width="524" height="190" rx="10" fill="#FFFFFF" stroke="#D5DEE7"/>
-      <text x="648" y="250" fill="#4A5A6B" font-size="12" letter-spacing="2.5" font-weight="600">PATIENT</text>
-      <text x="648" y="286" fill="#132030" font-size="26" font-weight="600">Tula</text>
-      <text x="648" y="318" fill="#34465A" font-size="15">Health context from the patient's own record</text>
-      <text x="648" y="344" fill="#34465A" font-size="15">PHI stays inside the workspace boundary</text>
-      <text x="648" y="370" fill="#34465A" font-size="15">Safety constraints tested as release blockers</text>
+      <rect x="616" y="212" width="524" height="190" rx="10" fill="#FFFFFF" stroke="#F7630C"/>
+      <text x="648" y="250" fill="#574438" font-size="12" letter-spacing="2.5" font-weight="600">PATIENT</text>
+      <text x="648" y="286" fill="#241A12" font-size="26" font-weight="600">Tula</text>
+      <text x="648" y="318" fill="#574438" font-size="15">Health context from the patient's own record</text>
+      <text x="648" y="344" fill="#574438" font-size="15">PHI stays inside the workspace boundary</text>
+      <text x="648" y="370" fill="#574438" font-size="15">Safety constraints tested as release blockers</text>
     </g>
 
-    <rect x="60" y="426" width="1080" height="54" rx="10" fill="#E6F2EF" stroke="#BFDDD5"/>
-    <text x="96" y="459" fill="#1F6B5C" font-size="13" letter-spacing="2.5" font-weight="600">OPENCLAW FOUNDATION</text>
-    <text x="370" y="459" fill="#2F5E54" font-size="15">Gateway, tools, memory and skills. Deployment and controls vary.</text>
+    <rect x="60" y="426" width="1080" height="54" rx="10" fill="#F7894A" stroke="#F7630C"/>
+    <text x="96" y="459" fill="#241A12" font-size="13" letter-spacing="2.5" font-weight="600">OPENCLAW FOUNDATION</text>
+    <text x="370" y="459" fill="#241A12" font-size="15">Gateway, tools, memory and skills. Deployment and controls vary.</text>
   </g>
 </svg>

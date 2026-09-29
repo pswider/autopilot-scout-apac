@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="docs/slide-notes.md"><img alt="Slides" src="https://img.shields.io/badge/slides-16-132030?style=flat-square"></a>
-  <a href="docs/fact-check.md"><img alt="Claims checked" src="https://img.shields.io/badge/claims%20checked-first--party%20sources-1F6B5C?style=flat-square"></a>
-  <a href="skills/visit-prep-lite/SKILL.md"><img alt="Sample skill" src="https://img.shields.io/badge/sample-skill%20%2B%20Waza%20evals-34465A?style=flat-square"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-4A5A6B?style=flat-square"></a>
+  <a href="docs/slide-notes.md"><img alt="Slides" src="assets/badges/slides.svg"></a>
+  <a href="docs/fact-check.md"><img alt="Claims checked" src="assets/badges/claims-checked.svg"></a>
+  <a href="skills/visit-prep-lite/SKILL.md"><img alt="Sample skill" src="assets/badges/sample-skill.svg"></a>
+  <a href="LICENSE"><img alt="License" src="assets/badges/license.svg"></a>
 </p>
 
 <p align="center">

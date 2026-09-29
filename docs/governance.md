@@ -11,8 +11,9 @@ flowchart TB
     H --> Q4["What remains auditable?"]
     Q1 & Q2 & Q3 & Q4 --> G["Governed"]
 
-    classDef q fill:#FFFFFF,stroke:#34465A,color:#132030
-    classDef g fill:#132030,stroke:#132030,color:#F2F5F8
+    classDef default fill:#FFF9F0,stroke:#EAA300,color:#241A12
+    classDef q fill:#FFFFFF,stroke:#F7630C,color:#241A12
+    classDef g fill:#FFB900,stroke:#241A12,color:#241A12
     class Q1,Q2,Q3,Q4 q
     class G g
 ```

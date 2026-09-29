@@ -14,9 +14,10 @@ flowchart LR
     R -->|no| FIX["Fix skill or tasks"]
     FIX --> PR
 
-    classDef lane fill:#FFFFFF,stroke:#34465A,color:#132030
-    classDef ok fill:#E6F2EF,stroke:#1F6B5C,color:#132030
-    classDef bad fill:#FBEDEA,stroke:#A5493A,color:#132030
+    classDef default fill:#FFF9F0,stroke:#EAA300,color:#241A12
+    classDef lane fill:#FFFFFF,stroke:#EAA300,color:#241A12
+    classDef ok fill:#FFB900,stroke:#241A12,color:#241A12
+    classDef bad fill:#F7894A,stroke:#241A12,color:#241A12,stroke-dasharray:5 3
     class S,L lane
     class SHIP ok
     class FIX bad

@@ -43,7 +43,10 @@ flowchart LR
     MEM <--> WS
     SK --> AC
 
-    classDef boundary fill:#E6F2EF,stroke:#1F6B5C,color:#132030
+    classDef default fill:#FFF9F0,stroke:#EAA300,color:#241A12
+    classDef group fill:#FFF9F0,stroke:#EAA300,color:#241A12
+    classDef boundary fill:#FFB900,stroke:#241A12,color:#241A12
+    class CH,OC,WS,AC group
     class SK boundary
 ```
 
