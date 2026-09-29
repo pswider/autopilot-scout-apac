@@ -10,7 +10,12 @@
 </p>
 
 <p align="center">
-  Companion repository for the talk given at the <b>Modern Workplace Conference Manila</b> (29 September 2026)<br>
+  <b>Autopilot and Microsoft Scout developer resources.</b><br>
+  Identity, governance and evaluation for agents that act on your behalf.
+</p>
+
+<p align="center">
+  Companion repository for the talk <i>From Vibes to Verifiable</i>, given at the <b>Modern Workplace Conference Manila</b> (29 September 2026)<br>
   and the <b>Modern Work Conference Kuala Lumpur</b> (MWCKL 2026) by <b>Paul Swider</b>, RealActivity.
 </p>
 
