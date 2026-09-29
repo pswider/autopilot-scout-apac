@@ -1,0 +1,69 @@
+name: Skill gates
+
+# Structural lane from the talk. Runs on every PR with the mock executor,
+# so it needs no model and no API key. The live lane (eval.yaml) is manual.
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "evals/**"
+      - "tools/**"
+      - ".github/workflows/skill-gates.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      live:
+        description: "Also run the live lane (needs a COPILOT_GITHUB_TOKEN secret)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  structural:
+    name: Structural lane
+    runs-on: ubuntu-latest
+    env:
+      WAZA_NO_UPDATE_CHECK: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Waza
+        run: curl -fsSL https://raw.githubusercontent.com/microsoft/waza/main/install.sh | bash
+
+      - name: Inspect the contract
+        run: waza check skills/visit-prep-lite
+
+      - name: Every promise in SKILL.md has a task
+        run: waza spec verify skills/visit-prep-lite evals/visit-prep-lite/eval.yaml --fail --format github-actions
+
+      - name: Wire up tasks and fixtures (mock executor)
+        run: waza run evals/visit-prep-lite/eval.mock.yaml --skip-graders -v
+
+      - name: Trust Bridge audit chain is intact
+        run: python3 tools/trust-bridge/explain.py --verify
+
+  live:
+    name: Live lane
+    if: github.event_name == 'workflow_dispatch' && inputs.live
+    needs: structural
+    runs-on: ubuntu-latest
+    env:
+      WAZA_NO_UPDATE_CHECK: "1"
+      GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Waza
+        run: curl -fsSL https://raw.githubusercontent.com/microsoft/waza/main/install.sh | bash
+      - name: Live behavior evaluation
+        run: waza run evals/visit-prep-lite/eval.yaml -v -o results.json --reporter junit:results.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: waza-live-results
+          path: |
+            results.json
+            results.xml

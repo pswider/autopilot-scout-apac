@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/microsoft/waza/main/schemas/eval.schema.json
+# Live certification lane. Runs against a real model through the GitHub Copilot SDK.
+#   waza run evals/visit-prep-lite/eval.yaml -v
+name: visit-prep-lite-eval
+description: Live behavior suite for visit-prep-lite across five behavior dimensions.
+skill: visit-prep-lite
+schemaVersion: "1.0"
+version: "1.0"
+config:
+  trials_per_task: 1
+  timeout_seconds: 300
+  parallel: false
+  executor: copilot-sdk
+  model: claude-sonnet-4.6
+metrics:
+  - name: task_completion
+    weight: 1.0
+    threshold: 0.85
+    description: Aggregate pass threshold, matching the Tula live lane default.
+graders:
+  - type: code
+    name: has_output
+    config:
+      assertions:
+        - "len(output.strip()) > 0"
+tasks:
+  - "tasks/*.yaml"
+  - "tasks/golden/*.yaml"

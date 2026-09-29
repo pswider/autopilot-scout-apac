@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">From Vibes to Verifiable</title>
+  <desc id="d">If it acts, it needs evidence. Runtime, Skills, Boundary, Tests. Companion repository for talks in Manila and Kuala Lumpur, 2026.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1621"/>
+      <stop offset="1" stop-color="#15202E"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#grid)"/>
+  <rect x="72" y="72" width="4" height="120" fill="#5FB3A1"/>
+  <g font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif">
+    <text x="96" y="100" fill="#8FA3B8" font-size="15" letter-spacing="3">REALACTIVITY  /  MANILA + KUALA LUMPUR  /  2026</text>
+    <text x="94" y="152" fill="#F2F5F8" font-size="54" font-weight="600" letter-spacing="-0.5">From Vibes to Verifiable</text>
+    <text x="96" y="194" fill="#B9C6D3" font-size="21">If it acts, it needs evidence.</text>
+    <g font-size="13" letter-spacing="2.5" font-weight="600">
+      <rect x="96" y="246" width="150" height="40" rx="6" fill="none" stroke="#2E3E51"/>
+      <text x="171" y="271" fill="#D5DEE7" text-anchor="middle">RUNTIME</text>
+      <rect x="262" y="246" width="150" height="40" rx="6" fill="none" stroke="#2E3E51"/>
+      <text x="337" y="271" fill="#D5DEE7" text-anchor="middle">SKILLS</text>
+      <rect x="428" y="246" width="150" height="40" rx="6" fill="none" stroke="#2E3E51"/>
+      <text x="503" y="271" fill="#D5DEE7" text-anchor="middle">BOUNDARY</text>
+      <rect x="594" y="246" width="150" height="40" rx="6" fill="none" stroke="#5FB3A1"/>
+      <text x="669" y="271" fill="#5FB3A1" text-anchor="middle">TESTS</text>
+    </g>
+    <text x="96" y="318" fill="#6F8397" font-size="13">What executes   ·   When it should act   ·   What data can move   ·   What proves behavior</text>
+  </g>
+  <g transform="translate(930 84)" fill="none" stroke-linecap="round">
+    <circle cx="120" cy="96" r="88" stroke="#233244" stroke-width="1.5"/>
+    <circle cx="120" cy="96" r="62" stroke="#2A3B4F" stroke-width="1.5"/>
+    <circle cx="120" cy="96" r="36" stroke="#34495F" stroke-width="1.5"/>
+    <path d="M104 97 l11 11 l22 -24" stroke="#5FB3A1" stroke-width="4"/>
+  </g>
+</svg>

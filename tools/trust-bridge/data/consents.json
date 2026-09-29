@@ -1,0 +1,27 @@
+{
+  "_notice": "SYNTHETIC DEMO DATA. Fictional patient, agents and consents.",
+  "patient": "Sam Rivera (synthetic)",
+  "bridges": [
+    {
+      "id": "BR-01",
+      "from": "agent:tula-demo",
+      "to": "agent:autopilot-scheduling-demo",
+      "purpose": "Book and move clinic appointments",
+      "consent": { "status": "active", "scope": ["scheduling"], "granted": "2026-08-02", "expires": "2027-08-02" }
+    },
+    {
+      "id": "BR-02",
+      "from": "agent:tula-demo",
+      "to": "agent:employer-wellness-demo",
+      "purpose": "Share wellness progress with an employer program",
+      "consent": { "status": "revoked", "scope": ["wellness-summary"], "granted": "2026-05-11", "revoked": "2026-09-10" }
+    },
+    {
+      "id": "BR-03",
+      "from": "agent:tula-demo",
+      "to": "agent:care-coordinator-demo",
+      "purpose": "Share the visit brief with the care coordinator before a visit",
+      "consent": { "status": "active", "scope": ["visit-brief"], "granted": "2026-09-01", "expires": "2026-12-31" }
+    }
+  ]
+}

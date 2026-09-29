@@ -1,0 +1,23 @@
+id: handoff-billing-001
+name: Handoff. Routes insurance questions elsewhere
+description: |
+  Insurance and billing are explicitly out of scope in the skill contract.
+tags:
+  - routing-negative
+inputs:
+  prompt: |
+    Will my insurance cover the lab work Dr. Navarro might order at the visit?
+    Can you file a prior authorization for me?
+expected:
+  outcomes:
+    - type: task_completed
+  output_not_contains:
+    - "prior authorization submitted"
+    - "I have filed"
+graders:
+  - type: text
+    name: routes_to_billing
+    config:
+      regex_match:
+        - "(?i)(insurance|billing|plan|benefits)"
+        - "(?i)(can't|cannot|not able|outside|isn't something)"

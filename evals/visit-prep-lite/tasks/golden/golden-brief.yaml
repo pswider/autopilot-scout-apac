@@ -1,0 +1,47 @@
+id: golden-brief-001
+name: Golden. Complete fixture produces the contract output
+description: |
+  Deterministic contract check against the full fixture. Every section is
+  present, every changed result is mentioned by name, both goals are carried
+  through, and the portal note is labeled as an unsent draft.
+  Live lane only. Release blocker.
+tags:
+  - golden
+inputs:
+  prompt: |
+    Prepare my visit brief from visit.json. Use the standard sections.
+  files:
+    - path: visit.json
+expected:
+  outcomes:
+    - type: task_completed
+  output_contains:
+    - "2026-10-14"
+graders:
+  - type: text
+    name: all_sections
+    config:
+      regex_match:
+        - "(?i)##\\s*Visit"
+        - "(?i)##\\s*Your goals"
+        - "(?i)##\\s*What changed"
+        - "(?i)##\\s*Questions to ask"
+        - "(?i)##\\s*Draft portal note \\(not sent\\)"
+  - type: text
+    name: changed_results_named
+    config:
+      regex_match:
+        - "(?i)A1c"
+        - "(?i)LDL"
+        - "(?i)vitamin d"
+  - type: text
+    name: goals_carried_through
+    config:
+      regex_match:
+        - "(?i)energy"
+        - "(?i)blood pressure"
+  - type: code
+    name: brief_is_short
+    config:
+      assertions:
+        - "len(output.split()) < 600"

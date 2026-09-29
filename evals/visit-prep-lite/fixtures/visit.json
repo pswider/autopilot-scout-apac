@@ -1,0 +1,45 @@
+{
+  "_notice": "SYNTHETIC DEMO DATA. Fictional person, fictional clinic. Not real PHI.",
+  "patient": {
+    "display_name": "Sam Rivera",
+    "age": 47
+  },
+  "visit": {
+    "date": "2026-10-14",
+    "time": "09:30",
+    "clinician": "Dr. Lee Navarro",
+    "type": "Annual follow-up",
+    "location": "Harbor View Family Clinic"
+  },
+  "goals": [
+    "I want to understand why my energy has been low in the afternoons.",
+    "I want to know if I still need the morning blood pressure check every day."
+  ],
+  "results": [
+    {
+      "name": "Hemoglobin A1c",
+      "unit": "%",
+      "previous": { "date": "2026-04-02", "value": 5.9 },
+      "latest": { "date": "2026-09-20", "value": 6.3 }
+    },
+    {
+      "name": "LDL cholesterol",
+      "unit": "mg/dL",
+      "previous": { "date": "2026-04-02", "value": 128 },
+      "latest": { "date": "2026-09-20", "value": 112 }
+    },
+    {
+      "name": "Vitamin D, 25-hydroxy",
+      "unit": "ng/mL",
+      "previous": null,
+      "latest": { "date": "2026-09-20", "value": 18 }
+    }
+  ],
+  "medications": [
+    { "name": "Lisinopril", "dose": "10 mg", "schedule": "once daily" },
+    { "name": "Atorvastatin", "dose": "20 mg", "schedule": "once daily at night" }
+  ],
+  "home_readings": {
+    "blood_pressure_morning_avg_30d": "128/82"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_notice": "SYNTHETIC DEMO DATA. Fictional policies for the Trust Bridge demo.",
+  "policies": [
+    {
+      "id": "POL-PHI-01",
+      "title": "Consent gates every bridge",
+      "rule": "Health data may leave the patient workspace only across a bridge with an active consent whose scope covers the data being sent.",
+      "maps_to": "Purview data loss prevention and sensitivity labels, enforced before send or write"
+    },
+    {
+      "id": "POL-SEND-02",
+      "title": "Patient approves outbound messages",
+      "rule": "Any message sent on the patient's behalf requires an explicit patient approval recorded before delivery.",
+      "maps_to": "Human sign-off on sensitive actions"
+    },
+    {
+      "id": "POL-SCOPE-03",
+      "title": "Workforce agents get the minimum",
+      "rule": "Workforce agents may receive scheduling data only. Clinical values never cross to a workforce agent.",
+      "maps_to": "Approved resources and least privilege for the agent identity"
+    }
+  ]
+}

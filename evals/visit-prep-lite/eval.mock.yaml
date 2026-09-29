@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/microsoft/waza/main/schemas/eval.schema.json
+# Structural lane. Mock executor, no model and no API key. Runs on every PR.
+#   waza run evals/visit-prep-lite/eval.mock.yaml --skip-graders -v
+# Golden tasks are excluded because they only make sense against a live model.
+name: visit-prep-lite-structural
+description: Structural wiring check for visit-prep-lite. Spec loads, tasks and fixtures resolve, skill binds.
+skill: visit-prep-lite
+schemaVersion: "1.0"
+version: "1.0"
+config:
+  trials_per_task: 1
+  timeout_seconds: 60
+  parallel: false
+  executor: mock
+  model: mock
+graders:
+  - type: code
+    name: has_output
+    config:
+      assertions:
+        - "len(output) > 0"
+tasks:
+  - "tasks/*.yaml"

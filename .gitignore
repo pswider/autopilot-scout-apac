@@ -1,0 +1,5 @@
+results/
+.waza-cache/
+*.ndjson
+__pycache__/
+.DS_Store

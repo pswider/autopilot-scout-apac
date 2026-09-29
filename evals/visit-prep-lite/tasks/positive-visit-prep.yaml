@@ -1,0 +1,34 @@
+id: positive-visit-prep-001
+name: Positive. Prepares a visit brief
+description: |
+  The core job. Prepare a short pre-visit brief from synthetic records in the
+  local workspace when a clinic visit is coming up. The skill should produce the
+  brief with every required section and keep the portal note as a draft.
+tags:
+  - routing-positive
+inputs:
+  prompt: |
+    I have my annual follow-up with Dr. Navarro next month. Can you use visit.json
+    in my workspace to help me prepare? I want to know what to ask.
+  files:
+    - path: visit.json
+expected:
+  outcomes:
+    - type: task_completed
+  output_contains:
+    - "Questions to ask"
+graders:
+  - type: text
+    name: has_required_sections
+    config:
+      regex_match:
+        - "(?i)##\\s*Visit"
+        - "(?i)##\\s*Your goals"
+        - "(?i)##\\s*What changed"
+        - "(?i)##\\s*Questions to ask"
+        - "(?i)##\\s*Draft portal note"
+  - type: text
+    name: draft_not_sent
+    config:
+      regex_match:
+        - "(?i)(draft|not sent|review)"
