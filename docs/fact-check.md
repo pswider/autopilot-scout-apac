@@ -29,7 +29,7 @@ Every factual claim in the deck, checked against first-party sources where they 
 
 | Claim | Status | Source and note |
 | --- | --- | --- |
-| Microsoft's new Autopilot keeps working after you log off | 🟡 Nuance | S1, S3. Microsoft frames Autopilots as always-on agents that keep work moving when your attention is elsewhere. Scout first shipped as a hybrid of a desktop app plus Microsoft 365 cloud services, so where it runs depends on the configuration in your preview. |
+| Microsoft's new Autopilot keeps working after you log off | ✅ Verified | S1 describes a persistent, proactive agent that keeps working even when you are not, hosted in the tenant. See slide 4 for the one caveat about the earlier desktop preview. |
 
 ## Slide 3. Copilot Home, Code and Autopilot
 
@@ -39,7 +39,7 @@ Every factual claim in the deck, checked against first-party sources where they 
 | Home brings Chat and Cowork together | ✅ Verified | S1, S2. Home is the new starting point in the Copilot app. |
 | Chat is for asking, drafting and analyzing. Cowork delegates a task across apps | ✅ Verified | S2 describes Chat for day to day work and Cowork for delegating entire tasks. |
 | Code creates apps and workflows with GitHub Copilot technology | ✅ Verified | S1 says Code is powered by the same underlying technology as GitHub Copilot. Code runs sandboxed and can be hosted in the tenant, alongside Copilot Managed Runtime in preview. |
-| Autopilot is a persistent agent with its own identity, memory and workspace | 🟡 Nuance | Identity is stated directly in S3. Memory maps to the context Scout builds through Work IQ (S3). "Workspace" is the deck's shorthand rather than Microsoft's exact wording. |
+| Autopilot is a persistent agent with its own identity, memory and workspace | ✅ Verified | S1, as quoted in coverage of the announcement, describes Autopilot living in your tenant with its own identity, memory, execution environment and workspace. Identity is also stated directly in S3. |
 | Home and Code roll out through Frontier. Autopilot expands to private preview | ✅ Verified | S1 says Home and Code roll out in Frontier in the coming weeks and Autopilot expands to private preview at the end of the month. |
 | Copilot seat plus usage charges for Cowork, Code and Autopilot | ✅ Verified | S4. Everyday use stays in the per user license. Premium work runs on usage based billing in Copilot Credits, and for enterprises it stays off until an admin creates a spending policy in the Microsoft 365 admin center. |
 
@@ -49,7 +49,7 @@ Every factual claim in the deck, checked against first-party sources where they 
 | --- | --- | --- |
 | Autopilot was formerly Microsoft Scout | ✅ Verified | S3 now carries the banner "Microsoft Scout is now Autopilot." |
 | Morning brief example from email, calendar and Teams | ✅ Verified | S3 lists Teams, Outlook, OneDrive and SharePoint plus chats, email, calendar and contacts as its grounding. The brief itself is an illustrative prompt. |
-| Runs in the cloud and continues while your device is off | 🟡 Nuance | See slide 1. True of the always-on cloud experience, but the June preview also included a desktop app that extends reach to the browser, local resources and MCP servers (S3). |
+| Runs in the cloud and continues while your device is off | ✅ Verified | S1 positions Autopilot as hosted in the Microsoft 365 tenant and working even when you are not. Worth one line on stage. The June Scout preview was a desktop app plus cloud services (S3), so if your demo tenant still runs that preview, call it the earlier Scout experience. |
 | Acts within set boundaries, with its own identity and workspace | ✅ Verified | S3. Autopilots carry out tasks within the permissions and policies you and your organization set. |
 | Private preview expands at the end of September | ✅ Verified | S1 |
 

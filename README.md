@@ -19,6 +19,13 @@
   and the <b>Modern Work Conference Kuala Lumpur</b> (MWCKL 2026) by <b>Paul Swider</b>, RealActivity.
 </p>
 
+<p align="center">
+  <b><a href="downloads/From-Vibes-to-Verifiable-Manila-KL-2026.pptx">Download the PowerPoint</a></b> ·
+  <a href="docs/slide-notes.md">Slide notes</a> ·
+  <a href="docs/fact-check.md">Fact check</a> ·
+  <a href="https://github.com/realactivity/tula">Explore Tula</a>
+</p>
+
 ---
 
 ## The talk in one paragraph
@@ -105,6 +112,7 @@ python3 tools/trust-bridge/explain.py --event evt-0007
 .
 ├── README.md                  you are here
 ├── RESOURCES.md               curated first-party links
+├── downloads/                 the PowerPoint deck from Manila and Kuala Lumpur
 ├── docs/
 │   ├── slide-notes.md         all 16 slides with notes and sources
 │   ├── fact-check.md          every factual claim, status and source
