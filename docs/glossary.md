@@ -3,7 +3,8 @@
 | Term | Meaning in this talk |
 | --- | --- |
 | **Agent 365** | Microsoft's control plane to observe, govern and secure AI agents across an organization, built on Entra, Purview and Defender. [Docs](https://learn.microsoft.com/en-us/microsoft-agent-365/overview) |
-| **Autopilot** | Microsoft's category of always-on agents that act with their own identity. Also the name of the Copilot capability announced 25 September 2026, previously called Microsoft Scout |
+| **Agent Plugins 1.0** | An open, vendor-neutral package format for skills and MCP server configurations. Lantern provides a source example. [Specification](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md) |
+| **Autopilot** | In this repo, the cloud-hosted Copilot capability announced 25 September 2026, previously called Microsoft Scout. It has its own identity, memory, computer and workspace. [Announcement](https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/) |
 | **Behavior eval** | A test that checks what an agent does, not just whether it runs. Graded against expected outputs, refusals or tool use |
 | **Copilot Credits** | The usage based billing unit for premium Copilot work such as Cowork, Code and Autopilot, on top of the per user license |
 | **Cowork** | Copilot's mode for delegating a whole task across apps, now inside Home |
@@ -12,7 +13,9 @@
 | **Frontier program** | Microsoft's early access program for new Copilot and agent capabilities. [Program page](https://www.microsoft.com/en-us/copilot/resources/frontier-program) |
 | **Golden task** | An eval task with complete fixture input and a fixed contract output, used as a release blocker |
 | **Handoff** | Routing a request that belongs to another skill, person or system instead of attempting it |
+| **Lantern** | RealActivity's desktop Scout bridge, combining a skill and local MCP server using a OneDrive App Folder mailbox. RealActivity confirms the bridge was deployed and tested; work paused before the mobile app was built. [Repo](https://github.com/realactivity/scout-remote) |
 | **MCP** | Model Context Protocol, an open standard for connecting agents to tools and data. [Spec](https://modelcontextprotocol.io) |
+| **MCP Apps** | An MCP extension for interactive interfaces rendered inside supporting AI hosts. Separate from Agent Plugins packaging and from standalone mobile applications. [Docs](https://modelcontextprotocol.io/extensions/apps/overview) |
 | **OpenClaw** | An open source personal agent runtime stewarded by the independent OpenClaw Foundation. Microsoft Scout and Tula both build on it. [Repo](https://github.com/openclaw/openclaw) |
 | **PHI** | Protected health information |
 | **Policy conformance** | The capability Microsoft is contributing upstream to OpenClaw so a deployment can verify it runs within its security and compliance requirements |

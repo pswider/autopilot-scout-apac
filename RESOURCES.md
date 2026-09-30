@@ -14,6 +14,18 @@ Curated links from the talk, first-party wherever possible. Mostly Microsoft, pl
 | [Frontier program](https://www.microsoft.com/en-us/copilot/resources/frontier-program) | Early access path for Home, Code and Autopilot |
 | [Work IQ](https://www.microsoft.com/en-us/copilot/features/work-iq) | The work context Autopilot builds on |
 
+## Scout skills and plugin development
+
+| Resource | Why it matters |
+| --- | --- |
+| [Create and manage custom skills in Scout](https://learn.microsoft.com/en-us/microsoft-scout/use-microsoft-scout#manage-skills) | Microsoft's skill format and discovery paths for the desktop preview |
+| [Power CAT skills: getting started](https://github.com/microsoft/power-cat-skills#getting-started) | Microsoft's Scout examples use Copilot CLI to install plugins, then a new Scout conversation discovers the skills |
+| [Agent Plugins 1.0 in VS Code, Copilot CLI and the Copilot app](https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/) | GitHub's packaging and client-support guidance; GitHub Copilot support does not establish cloud Autopilot compatibility |
+| [Lantern desktop plugin](https://github.com/realactivity/scout-remote/tree/main/plugin/lantern-plugin) | Source example combining a skill, MCP configuration and a .NET bridge in the Agent Plugins 1.0 layout |
+| [Lantern project](https://github.com/realactivity/scout-remote) | RealActivity confirms the desktop bridge was deployed and tested; work paused before the mobile app was built. See the [maintainer status update](docs/fact-check.md#developer-resources-and-compatibility) |
+
+These resources cover different clients and deployment models. Microsoft's cloud-hosted Autopilot announcement does not establish that a desktop Scout integration carries over unchanged.
+
 ## Identity for agents
 
 | Resource | Why it matters |
@@ -76,6 +88,8 @@ Curated links from the talk, first-party wherever possible. Mostly Microsoft, pl
 | Resource | Why it matters |
 | --- | --- |
 | [Agent Skills specification](https://agentskills.io) | The `SKILL.md` format Waza validates against |
+| [Agent Plugins 1.0 specification](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md) | Portable packaging for skills and MCP server configurations, including the layout Lantern uses |
+| [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview) | Interactive UI resources rendered inside supporting MCP hosts; distinct from plugin packaging or a standalone mobile app |
 | [Model Context Protocol](https://modelcontextprotocol.io) | How agents connect to tools and data |
 | [HL7 FHIR](https://hl7.org/fhir/) | The health data format in Tula's workspace |
 | [SMART App Launch](https://hl7.org/fhir/smart-app-launch/) | How Tula connects to patient portals |

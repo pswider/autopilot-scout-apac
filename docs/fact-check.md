@@ -1,6 +1,6 @@
 # Fact check
 
-Every factual claim in the deck, checked against first-party sources where they exist. Checked on **30 September 2026**. Preview features, names and billing change often, so treat anything marked *preview* as a snapshot.
+Claims from the deck and accompanying developer resources, checked against first-party sources where they exist. Checked on **30 September 2026**. Preview features, names and billing change often, so treat anything marked *preview* as a snapshot.
 
 **Status key**
 
@@ -24,6 +24,13 @@ Every factual claim in the deck, checked against first-party sources where they 
 | **S8** | [openclaw/openclaw](https://github.com/openclaw/openclaw) README and [docs](https://docs.openclaw.ai) | OpenClaw Foundation |
 | **S9** | [What is Microsoft Entra Agent ID?](https://learn.microsoft.com/en-us/entra/agent-id/what-is-microsoft-entra-agent-id) | Microsoft Learn |
 | **S10** | [prep-my-visit SKILL.md](https://github.com/realactivity/tula/blob/main/skills/prep-my-visit/SKILL.md) | RealActivity |
+| **S11** | [Use Microsoft Scout: manage skills](https://learn.microsoft.com/en-us/microsoft-scout/use-microsoft-scout#manage-skills) | Microsoft Learn |
+| **S12** | [Power CAT skills: getting started](https://github.com/microsoft/power-cat-skills#getting-started) | Microsoft |
+| **S13** | [Agent Plugins Specification 1.0.0](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md) | Agent Plugins project |
+| **S14** | [MCP Apps overview](https://modelcontextprotocol.io/extensions/apps/overview) | Model Context Protocol project |
+| **S15** | [Lantern README and project status](https://github.com/realactivity/scout-remote) | RealActivity |
+| **S16** | [Lantern plugin package and source](https://github.com/realactivity/scout-remote/tree/main/plugin/lantern-plugin) | RealActivity |
+| **S17** | Maintainer status update, 30 September 2026: Paul Swider confirms the Lantern desktop bridge was deployed and tested, and work paused before the mobile app was built | Paul Swider, RealActivity |
 
 ## Slide 1. Title
 
@@ -108,6 +115,21 @@ Every factual claim in the deck, checked against first-party sources where they 
 ## Slide 12 to 16
 
 The governance gap, Trust Bridge and reusable pattern slides are the speaker's argument rather than factual claims. The Microsoft controls they lean on are verified above (identity, approved resources, sign-off, Purview enforcement). The closing links resolve to [realactivity/tula](https://github.com/realactivity/tula) and [microsoft/waza](https://github.com/microsoft/waza).
+
+## Developer resources and compatibility
+
+Reviewed on **30 September 2026**. Source inspection is distinguished from maintainer-reported deployment evidence below. S17 updates the earlier deployment-status wording in Lantern's README.
+
+| Claim | Status | Source and note |
+| --- | --- | --- |
+| Microsoft publishes Scout extension guidance | ✅ Verified | S11 documents custom skills. S12 shows plugin installation through Copilot CLI, followed by a new Scout conversation. A blanket claim that Microsoft has published no developer guidance is inaccurate. |
+| Lantern demonstrates Agent Plugins 1.0 packaging | ✅ Verified | S13 defines the standard. S16 contains the root `plugin.json`, `mcp.json`, skill folder and .NET MCP bridge source. The manifests target the 1.0.0 schemas. This review does not certify runtime behavior across clients. |
+| Lantern contains a skill and an MCP server | ✅ Verified | S16 includes `SKILL.md` orchestration and a stdio MCP implementation exposing seven tools. |
+| Lantern's desktop bridge was deployed and tested | 🔄 Update | S17 confirms deployment and testing by RealActivity, updating the earlier offline-only status in S15. This review inspected source and CI records; it did not independently repeat that deployment. |
+| Work paused before the mobile app was built | ✅ Verified | S17. The deployed and tested desktop bridge and the planned mobile app are separate milestones. |
+| Agent Plugins and MCP Apps serve different purposes | ✅ Verified | S13 defines plugin packaging; S14 defines interactive UI inside supporting MCP hosts. A planned standalone mobile companion does not establish MCP Apps support. |
+| Desktop Scout and cloud-hosted Autopilot are separate integration targets | 🟡 Nuance | S1 describes cloud-hosted Autopilot; S15 targets desktop Scout. Shared lineage and package layout do not establish compatibility. Verify support in the target client and tenant. |
+| The lab demonstrates local development and evaluation patterns | ✅ Verified | The sample skill, Waza evaluation suite and offline Trust Bridge are local examples. Native installation in cloud-hosted Autopilot has not been verified here. |
 
 ## Worth adding next time
 

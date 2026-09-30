@@ -23,7 +23,8 @@
   <b><a href="downloads/From-Vibes-to-Verifiable-Manila-KL-2026.pptx">Download the PowerPoint</a></b> ·
   <a href="docs/slide-notes.md">Slide notes</a> ·
   <a href="docs/fact-check.md">Fact check</a> ·
-  <a href="https://github.com/realactivity/tula">Explore Tula</a>
+  <a href="https://github.com/realactivity/tula">Explore Tula</a> ·
+  <a href="https://github.com/realactivity/scout-remote">Explore Lantern</a>
 </p>
 
 ---
@@ -54,7 +55,17 @@ Agents have stopped waiting for prompts. On 25 September 2026 Microsoft introduc
 | Turn a passing demo into a release gate | [Release gates with Waza](docs/release-gates.md) |
 | Re-run the three live demos yourself | [Demo guide](docs/demos.md) |
 | Try the pattern on your own machine in five minutes | [Hands-on lab](#hands-on-lab) |
+| Inspect a skill packaged with an MCP server | [Lantern plugin example](#lantern-a-skill-plus-an-mcp-bridge) |
+| Find official skill and plugin guidance | [Developer resources](RESOURCES.md#scout-skills-and-plugin-development) |
 | Browse every link from the talk, grouped | [Resources](RESOURCES.md) |
+
+## Developer scope and compatibility
+
+This is an independent, hands-on resource for developers exploring Scout and Autopilot: a sample skill, Waza evaluations, an offline audit demonstration, and governance guidance with sources.
+
+The lab runs locally. It does not establish that these examples are installed or verified in Microsoft's new cloud-hosted Autopilot. Microsoft describes that deployment in its [25 September announcement](https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/); desktop Scout integration paths should be checked separately.
+
+Microsoft already publishes [custom-skill instructions](https://learn.microsoft.com/en-us/microsoft-scout/use-microsoft-scout#manage-skills) and [Scout plugin installation examples through Copilot CLI](https://github.com/microsoft/power-cat-skills#getting-started). Use those alongside this repo, and verify support in your target client and tenant.
 
 ## What Microsoft announced, and why it matters here
 
@@ -106,6 +117,20 @@ python3 tools/trust-bridge/explain.py --blocked
 python3 tools/trust-bridge/explain.py --event evt-0007
 ```
 
+## Lantern: a skill plus an MCP bridge
+
+[Lantern](https://github.com/realactivity/scout-remote) is RealActivity's open-source desktop bridge for a planned Microsoft Scout mobile companion. Its [desktop plugin package](https://github.com/realactivity/scout-remote/tree/main/plugin/lantern-plugin) is a concrete **Agent Plugins 1.0** example:
+
+- `plugin.json` supplies package metadata.
+- `skills/lantern-bridge/SKILL.md` supplies orchestration instructions.
+- `mcp.json` configures a local .NET MCP bridge with seven tools for status, commands, responses, receipts, activity and artifacts.
+
+The design uses the user's OneDrive App Folder as a command mailbox. Sensitive approvals stay on the desktop.
+
+**Current status, 30 September 2026:** we deployed and tested the desktop bridge. Work paused before the mobile app was built. The bridge targets desktop Scout; cloud-hosted Autopilot is a separate integration target.
+
+Agent Plugins package skills and MCP servers. [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview) add interactive interfaces inside supporting AI hosts. A separate mobile companion would not by itself make Lantern an MCP App.
+
 ## Repository map
 
 ```text
@@ -133,6 +158,7 @@ python3 tools/trust-bridge/explain.py --event evt-0007
 | Project | What it is |
 | --- | --- |
 | [realactivity/tula](https://github.com/realactivity/tula) | Open source patient agent skill layer on OpenClaw, with the Patient Agent Eval Standard v0.1 (78 tasks across 8 skills plus composition) |
+| [Lantern / realactivity/scout-remote](https://github.com/realactivity/scout-remote) | Deployed and tested desktop Scout bridge combining a skill and MCP server in an Agent Plugins 1.0 package; work paused before the mobile app was built |
 | [microsoft/waza](https://github.com/microsoft/waza) | Microsoft's CLI and framework to create, test, measure and improve agent skills |
 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | The open source personal agent runtime that Scout and Tula both build on |
 
